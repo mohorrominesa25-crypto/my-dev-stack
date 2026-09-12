@@ -1,4 +1,10 @@
-const Technologies = () => {
+import type { Itechnology } from "../types/technology";
+
+interface ItechnologyProps{
+    technologyPromise:Promise<Itechnology[]>
+}
+
+const Technologies = ({technologyPromise}:ItechnologyProps) => {
     return (
         <section className="container mx-auto px-25 ">
             <div >
