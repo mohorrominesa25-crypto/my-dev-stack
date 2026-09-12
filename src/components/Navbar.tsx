@@ -13,8 +13,9 @@ const Navbar = () => {
           <li className="hover:text-pink-600"><a href="">About</a></li>
           <li className="hover:text-pink-600"><a href="">Contact</a></li></ul>
         
-        <div className="flex justify-between gap-5"><button>Sign In</button>
-          <button className="bg-pink-600 px-3 rounded-[10px] text-white">Sign Up</button></div>
+        <div className="flex justify-between gap-5">
+            <button className="hover:scale-105 ">Sign In</button>
+          <button className=" hover:scale-105 bg-pink-600 px-3.5 rounded-[10px] text-white">Sign Up</button></div>
         </nav>
 
     );
