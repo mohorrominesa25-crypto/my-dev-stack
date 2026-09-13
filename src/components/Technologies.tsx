@@ -147,7 +147,15 @@ transition: Bounce,
             })
             
            }
-             <button onClick={() => setStack([])} className=" px-22 mt-2 py-2 border border-pink-600 rounded-2xl font-semibold text-pink-600 hover:scale-105">Remove All</button>
+             <button
+  onClick={() => {
+    setStack([]);
+    toast.success("All stack items are removed!");
+  }}
+  className="px-22 mt-2 py-2 border border-pink-600 rounded-2xl font-semibold text-pink-600 hover:scale-105"
+>
+  Remove All
+</button>
              </>)    }
         </div>
 
