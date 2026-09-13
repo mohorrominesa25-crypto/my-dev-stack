@@ -4,7 +4,7 @@ const Footer = () => {
 
     return (
         
-        <footer className="mt-5 bg-linear-to-br from-orange-100 via-pink-100 to-orange-200 container mx-auto px-35 py-5">
+        <footer className="mt-5 bg-linear-to-br from-orange-100 via-pink-100 to-orange-200 container mx-auto px-25 py-5">
             <section className=" grid grid-cols-4 gap-5" >
 
             <div className="grid grid-cols-1 space-y-3 pr-20">
