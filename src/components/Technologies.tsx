@@ -9,7 +9,7 @@ const Technologies = ({ technologyPromise }: ItechnologyProps) => {
   const technology = use(technologyPromise);
 
   return (
-    <section className="container mx-auto px-25">
+    <section className="container mx-auto px-25 bg-linear-to-br from-orange-50 via-pink-50 to-orange-100 py-4">
 
     
       <div>
@@ -29,7 +29,7 @@ const Technologies = ({ technologyPromise }: ItechnologyProps) => {
         
         <div className="col-span-9 grid grid-cols-3 gap-5">
 
-          {technology.map((tech) => (
+          {technology.map((tech:Itechnology) => (
             <div
               key={tech.id}
               className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm hover:shadow-md transition"
@@ -56,7 +56,7 @@ const Technologies = ({ technologyPromise }: ItechnologyProps) => {
               </h3>
 
               
-              <p className="text-sm leading-5 text-slate-500 min-h-[60px]">
+              <p className="text-sm leading-5 text-slate-500 min-h-15">
                 {tech.description}
               </p>
 
@@ -78,9 +78,9 @@ const Technologies = ({ technologyPromise }: ItechnologyProps) => {
                   <span className="text-yellow-400">★</span>{" "}
                   {tech.rating}
                 </span>
-
+                
               </div>
-
+                <button className="bg-pink-500 px-22 mt-2 py-2 border border-slate-200 rounded-2xl font-semibold text-white hover:scale-105">Add to Stack</button>
             </div>
           ))}
 

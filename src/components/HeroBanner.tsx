@@ -1,7 +1,7 @@
 import Banner from "../assets/banner-stack.png"
 const HeroBanner = () => {
     return (
-        <section className="container mx-auto px-25 grid grid-cols-2 items-center gap-35 ">
+        <section className="container mx-auto px-25 grid grid-cols-2 items-center gap-35 bg-linear-to-br from-orange-50 via-pink-50 to-orange-100 my-2 ">
             <div className=" py-10 space-y-6">
             <h2 className="text-5xl font-bold">Build Your Ideal  <br /><span className="bg-linear-to-r from-orange-400 via-pink-500 to-purple-600 bg-clip-text text-transparent">Development Stack</span></h2>
             <p className="text-[#475569] text-[20px]">Explore frontend, backend, database, and tooling options,
