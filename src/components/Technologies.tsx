@@ -1,5 +1,6 @@
-import { use } from "react";
+import { use, useState } from "react";
 import type { Itechnology } from "../types/technology";
+import { Bounce, toast } from "react-toastify";
 
 interface ItechnologyProps {
   technologyPromise: Promise<Itechnology[]>;
@@ -7,6 +8,24 @@ interface ItechnologyProps {
 
 const Technologies = ({ technologyPromise }: ItechnologyProps) => {
   const technology = use(technologyPromise);
+  const[Stack,setStack]=useState<Itechnology[]>([]);
+
+  const handleStack=(techno:Itechnology)=>{
+    // console.log(techno);
+    setStack([...Stack,techno]);
+    toast(`${techno.name} added to stack`, {
+position: "bottom-right",
+autoClose: 5000,
+hideProgressBar: false,
+closeOnClick: false,
+pauseOnHover: true,
+draggable: true,
+progress: undefined,
+theme: "light",
+transition: Bounce,
+});
+
+  }
 
   return (
     <section className="container mx-auto px-25 bg-linear-to-br from-orange-50 via-pink-50 to-orange-100 py-4">
@@ -80,15 +99,40 @@ const Technologies = ({ technologyPromise }: ItechnologyProps) => {
                 </span>
                 
               </div>
-                <button className="bg-pink-500 px-22 mt-2 py-2 border border-slate-200 rounded-2xl font-semibold text-white hover:scale-105">Add to Stack</button>
+                <button  onClick={()=>{handleStack(tech)}} className="bg-pink-500 px-22 mt-2 py-2 border border-slate-200 rounded-2xl font-semibold text-white hover:scale-105">Add to Stack</button>
             </div>
           ))}
 
         </div>
 
         
-        <div className="col-span-3 rounded-2xl p-5">
-           <h2>Your Stack</h2>
+        <div className="col-span-3  self-start p-5 border border-slate-200 rounded-[5px] px-5 py-2">
+           
+           <h2 className="text-2xl ">Your Stack</h2>
+             <h1>{Stack.length} Technology is Selected</h1>
+           {
+            Stack.map((technolog :Itechnology)=>{
+               
+                 
+             return(
+                <>
+                   
+                    <div className="flex gap-4 border border-slate-200 p-2 mb-2 rounded-[10px] ">
+                        <img src={technolog.icon} alt=""  className="h-10 w-10 object-contain" />
+               <div>
+                 <h2 className="text-[16px] font-semibold">{technolog.name}</h2>
+              
+                <span className="text-[8px] rounded bg-slate-100 px-2 py-1 text-slate-600">
+                  {technolog.category}
+                </span>
+               </div>
+                    </div>
+              
+
+                </>
+             )   
+            })
+           }
 
         </div>
 

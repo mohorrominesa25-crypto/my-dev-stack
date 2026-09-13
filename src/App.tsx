@@ -4,6 +4,7 @@ import Navbar from './components/Navbar'
 import Technologies from './components/Technologies'
 import './index.css'
 import type { Itechnology } from './types/technology'
+import { ToastContainer } from 'react-toastify'
 
   
   const technology=async():Promise<Itechnology[]>=>{
@@ -21,6 +22,7 @@ function App() {
       <Suspense fallback={<h2>Loading...</h2>}>
         <Technologies technologyPromise={technologyPromise}></Technologies>
         </Suspense>
+        <ToastContainer />
     </>
   )
 }
