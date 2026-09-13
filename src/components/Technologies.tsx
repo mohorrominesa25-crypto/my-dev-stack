@@ -104,7 +104,7 @@ transition: Bounce,
             <button
   onClick={() => handleStack(tech)}
   disabled={Stack.some((item) => item.id === tech.id)}
-  className="bg-pink-500 px-22 mt-2 py-2 border border-slate-200 rounded-2xl font-semibold text-white hover:scale-105 disabled:bg-slate-300 disabled:cursor-not-allowed disabled:hover:scale-100"
+  className="bg-pink-500 px-18 mt-2 py-2 border border-slate-200 rounded-2xl font-semibold text-white hover:scale-105 disabled:bg-slate-300 disabled:cursor-not-allowed disabled:hover:scale-100"
 >
   {Stack.some((item) => item.id === tech.id)
     ? "✓ Added to Stack"
