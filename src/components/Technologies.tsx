@@ -107,7 +107,7 @@ transition: Bounce,
   className="bg-pink-500 px-22 mt-2 py-2 border border-slate-200 rounded-2xl font-semibold text-white hover:scale-105 disabled:bg-slate-300 disabled:cursor-not-allowed disabled:hover:scale-100"
 >
   {Stack.some((item) => item.id === tech.id)
-    ? "Added"
+    ? "✓ Added to Stack"
     : "Add to Stack"}
 </button>
             </div>
