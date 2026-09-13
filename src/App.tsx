@@ -7,7 +7,7 @@ import type { Itechnology } from './types/technology'
 
   
   const technology=async():Promise<Itechnology[]>=>{
-    const response=await fetch('../public/technology');
+    const response=await fetch('/technology');
     const data= await response.json();
     return data;
   }
