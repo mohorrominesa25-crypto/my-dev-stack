@@ -131,12 +131,15 @@ transition: Bounce,
                   {technolog.category}
                 </span>
                </div>
-               <button onClick={() =>
-        setStack(Stack.filter((item) => item.id !== technolog.id)) }
-      className="text-red-500 text-xl font-bold pl-25 hover:text-red-700 hover:scale-105"
-  >
-      ×
-    </button>
+               <button
+  onClick={() => {
+    setStack(Stack.filter((item) => item.id !== technolog.id));
+    toast.success(`${technolog.name} removed successfully!`);
+  }}
+  className="text-red-500 text-xl font-bold pl-15 hover:text-red-700 hover:scale-105"
+>
+  ×
+</button>
                     </div>
                 </>
                 

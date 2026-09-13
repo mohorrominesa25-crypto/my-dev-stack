@@ -12,7 +12,7 @@ const Footer = () => {
                 <h2 className="text-[15px] text-slate-500  font-thin">Curated tools, technologies, and resources for developers building
                     modern software.</h2>
                     <span>
-                        <ul  className=" grid grid-cols-3 gap-1 font-semibold text-[16px]">
+                        <ul  className=" grid grid-cols-3 gap-1 font-semibold text-[14px]">
                             <li><a href="">Github</a></li>
                             <li><a href="">Twitter</a></li>
                             <li><a href="">LinkedIn</a></li>
