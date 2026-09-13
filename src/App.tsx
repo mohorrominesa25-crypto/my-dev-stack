@@ -5,6 +5,7 @@ import Technologies from './components/Technologies'
 import './index.css'
 import type { Itechnology } from './types/technology'
 import { ToastContainer } from 'react-toastify'
+import Footer from './components/Footer'
 
   
   const technology=async():Promise<Itechnology[]>=>{
@@ -23,6 +24,7 @@ function App() {
         <Technologies technologyPromise={technologyPromise}></Technologies>
         </Suspense>
         <ToastContainer />
+        <Footer></Footer>
     </>
   )
 }
