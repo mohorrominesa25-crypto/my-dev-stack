@@ -8,8 +8,8 @@ const HeroBanner = () => {
             compare them side by side, and put together the stack that fits your
             next project.</p>
              <span className="flex gap-4">
-                <button className="bg-linear-to-r from-orange-500 to-pink-600 border p-1.5 text-white font-semibold border-gray-50 rounded-[5px]">Explore Technologies </button> 
-             <button className="border rounded-[5px] px-6 border-gray-50">Learn More</button>
+                <button className="bg-linear-to-r from-orange-500 to-pink-600 border p-1.5 text-white font-semibold border-gray-50 rounded-[5px] hover:scale-105">Explore Technologies </button> 
+             <button className="border rounded-[5px] px-6 border-gray-50 hover:scale-105">Learn More</button>
                 </span>  
         </div>
 
