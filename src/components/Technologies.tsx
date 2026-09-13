@@ -100,7 +100,16 @@ transition: Bounce,
                 </span>
                 
               </div>
-                <button  onClick={()=>{handleStack(tech)}} className="bg-pink-500 px-22 mt-2 py-2 border border-slate-200 rounded-2xl font-semibold text-white hover:scale-105">Add to Stack</button>
+                {/* <button  onClick={()=>{handleStack(tech)}} className="bg-pink-500 px-22 mt-2 py-2 border border-slate-200 rounded-2xl font-semibold text-white hover:scale-105">Add to Stack</button> */}
+            <button
+  onClick={() => handleStack(tech)}
+  disabled={Stack.some((item) => item.id === tech.id)}
+  className="bg-pink-500 px-22 mt-2 py-2 border border-slate-200 rounded-2xl font-semibold text-white hover:scale-105 disabled:bg-slate-300 disabled:cursor-not-allowed disabled:hover:scale-100"
+>
+  {Stack.some((item) => item.id === tech.id)
+    ? "Added"
+    : "Add to Stack"}
+</button>
             </div>
           ))}
 
