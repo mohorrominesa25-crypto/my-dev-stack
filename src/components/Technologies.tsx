@@ -38,7 +38,7 @@ transition: Bounce,
           <span className="text-pink-400"> Technologies</span>
         </h2>
 
-        <p className="text-[#475569] text-[18px] pb-5">
+        <p className="text-[#475569] text-[18px] pt-1 pb-5">
           Pick one technology per category to build your ideal stack.
         </p>
       </div>
@@ -47,7 +47,7 @@ transition: Bounce,
       <div className="grid grid-cols-12 gap-5">
 
         
-        <div className="col-span-9 grid grid-cols-3 gap-5">
+        <div className="col-span-12 md:col-span-12 lg:col-span-9 grid grid-cols-1 lg:grid-cols-3 gap-5">
 
           {technology.map((tech:Itechnology) => (
             <div
@@ -116,7 +116,7 @@ transition: Bounce,
         </div>
 
         
-        <div className="col-span-3  self-start p-5 border border-slate-200 rounded-[5px] px-5 py-2">
+        <div className="col-span-12 md:col-span-12 lg:col-span-3  self-start p-5 border border-slate-200 rounded-[5px] px-5 py-2">
            
            <h2 className="text-2xl font-semibold ">Your Stack</h2>
              {Stack.length ==0 ? (<>
