@@ -27,6 +27,7 @@ transition: Bounce,
 
   }
 
+  
   return (
     <section className="container mx-auto px-25 bg-linear-to-br from-orange-50 via-pink-50 to-orange-100 py-4">
 
@@ -108,8 +109,12 @@ transition: Bounce,
         
         <div className="col-span-3  self-start p-5 border border-slate-200 rounded-[5px] px-5 py-2">
            
-           <h2 className="text-2xl ">Your Stack</h2>
-             <h1>{Stack.length} Technology is Selected</h1>
+           <h2 className="text-2xl font-semibold ">Your Stack</h2>
+             {Stack.length ==0 ? (<>
+             <h1 className="text-slate-400">No technology Selected Yet</h1>
+             <h1 className="text-slate-400 my-6 border border-dotted border-slate-300  rounded-lg text-center px-10 py-5">Your Stack is empty.</h1>
+             </>) :  (<>
+             <h1 className="text-slate-400 mb-3 text-[18px]">{Stack.length} Technology is Selected</h1>
            {
             Stack.map((technolog :Itechnology)=>{
                
@@ -127,13 +132,14 @@ transition: Bounce,
                 </span>
                </div>
                     </div>
-              
-
                 </>
+                
              )   
             })
+            
            }
-
+             <button onClick={() => setStack([])} className=" px-22 mt-2 py-2 border border-pink-600 rounded-2xl font-semibold text-pink-600 hover:scale-105">Remove All</button>
+             </>)    }
         </div>
 
       </div>
