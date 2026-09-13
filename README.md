@@ -1,32 +1,12 @@
-# React + TypeScript + Vite
+1.Name of my project: Development Stack
+2.A little description: It is a responsive web app for exploring technologies and building a personalized developer stack.
+3.Technology that you use:React.js,Tailwind CSS,TypeScript,React-Toastify,JSON ,Vite
+4.features about my project: 1.You can add or remove stack items 2.Buttons are disable if the item is selected 3.json file used,no data size limitation
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
-```
-
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+1.JSX: JSX lets us write HTML-like UI code inside JavaScript, making React components easier to create.
+2.Props vs State: Props pass data from parent to child, while state stores and manages changing data inside a component.
+3.useState: useState manages changing data; I used it to store and update the selected technology Stack.
+4.useEffect: useEffect handles side effects, but in this project I used use() with a Promise instead of useEffect to load JSON data.
+5.key: A unique key helps React identify and efficiently update each item in a .map() list.
+6.Conditional rendering: It means showing different UI based on a condition; I used it to show an empty message when Stack.length === 0.
+7.Parent-child data: A parent passes data through props, and a child can send data back using a callback function passed as a prop.
